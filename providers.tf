@@ -13,6 +13,6 @@ resource "google_storage_bucket" "bucket" {
 }
 
 variable service_account {
-  type = "string"
+  type = string
   sensitive = true
 }
