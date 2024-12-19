@@ -14,5 +14,4 @@ resource "google_storage_bucket" "bucket" {
 
 variable service_account {
   type = string
-  sensitive = true
 }
