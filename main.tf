@@ -1,6 +1,6 @@
 module "cloud-datastore" {
-  source  = "terraform-google-modules/cloud-datastore/google"
-  version = "0.1.0"
-  indexes     = "${file("index.yaml")}"
+  source  = "../modules/"
   # insert the 3 required variables here
+  name = datastore-instance
+  location = us-east-1
 }
