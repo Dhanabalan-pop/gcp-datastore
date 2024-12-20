@@ -1,7 +1,7 @@
 resource "google_firestore_database" "database" {
   project     = "arctic-marking-445204-v5"
   name        = "database-id-dm"
-  location_id = "us-east1-b"
+  location_id = "us-east1"
   type        = "DATASTORE_MODE"
 
   delete_protection_state = "DELETE_PROTECTION_DISABLED"
