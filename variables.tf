@@ -4,9 +4,11 @@ variable GOOGLE_CREDENTIALS_BASE64 {
 }
 variable project {
   type = string
+  default = "arctic-marking-445204-v5"
 }
 variable location {
   type = string
+  default = "us-east1"
 }
 variable name {
   type = string
