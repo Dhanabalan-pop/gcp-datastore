@@ -8,5 +8,5 @@ variable name {
 }
 variable location {
   type = string
-  default ="us-east-1"
+  default ="us-east1-a"
 }

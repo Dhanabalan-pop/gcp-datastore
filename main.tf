@@ -2,5 +2,5 @@ module "cloud-datastore" {
   source  = "./modules"
   # insert the 3 required variables here
   name = "datastore-instance"
-  location = "us-east-1"
+  location = "us-east1-a"
 }
