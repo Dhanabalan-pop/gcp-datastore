@@ -1,15 +1,28 @@
-resource "google_filestore_instance" "instance" {
-  name     = var.name
-  location = var.location
-  tier     = "BASIC_HDD"
+resource "google_firestore_database" "database" {
+  project     = "arctic-marking-445204-v5"
+  name        = "database-id-dm"
+  location_id = "us-east1-b"
+  type        = "DATASTORE_MODE"
 
-  file_shares {
-    capacity_gb = 1024
-    name        = "share1"
+  delete_protection_state = "DELETE_PROTECTION_DISABLED"
+  deletion_policy         = "DELETE"
+}
+
+resource "google_firestore_index" "my-index" {
+  project     = "arctic-marking-445204-v5"
+  database   = google_firestore_database.database.name
+  collection = "atestcollection"
+
+  query_scope = "COLLECTION_RECURSIVE"
+  api_scope = "DATASTORE_MODE_API"
+
+  fields {
+    field_path = "name"
+    order      = "ASCENDING"
   }
 
-  networks {
-    network = "default"
-    modes   = ["MODE_IPV4"]
+  fields {
+    field_path = "description"
+    order      = "DESCENDING"
   }
 }
