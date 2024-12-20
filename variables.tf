@@ -5,6 +5,6 @@ variable GOOGLE_CREDENTIALS_BASE64 {
 variable name {
   type = string
 }
-variable GOOGLE_CREDENTIALS_BASE64 {
-  type = location
+variable location {
+  type = string
 }
