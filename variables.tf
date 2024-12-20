@@ -4,7 +4,9 @@ variable GOOGLE_CREDENTIALS_BASE64 {
 }
 variable name {
   type = string
+  default ="test"
 }
 variable location {
   type = string
+  default ="us-east-1"
 }
