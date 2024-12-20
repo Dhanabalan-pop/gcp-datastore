@@ -25,3 +25,4 @@ resource "google_firestore_index" "index" {
     }
   }
 }
+
