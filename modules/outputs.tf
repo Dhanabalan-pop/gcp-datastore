@@ -6,7 +6,7 @@ output "firestore_instance_name" {
 
 output "firestore_instance_location" {
   description = "The location of the Firestore instance"
-  value       = google_firestore_database.database.location
+  value       = google_firestore_database.database.location_id
 }
 
 output "index_details" {
